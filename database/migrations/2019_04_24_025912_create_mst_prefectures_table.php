@@ -19,7 +19,7 @@ class CreateMstPrefecturesTable extends Migration
             $table->primary('prefecture_cd');
             $table->string('prefecture_name',20);
             $table->char('insert_cd',5);
-            $table->datetime('insert_date');
+            $table->timestamp();
         });
     }
 
