@@ -3,4 +3,5 @@
 use Illuminate\Http\Request;
 
 
-Route::resource('/mst_prefecres', 'MstPrefectureController', ['except' => ['edit','update','delete']]);
+Route::get('/mst_prefecres', 'MstPrefectureController@index');
+Route::match(['options','post'],'/mst_prefecres', 'MstPrefectureController@store');

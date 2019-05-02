@@ -13,10 +13,7 @@ class MstPrefectureController extends Controller
         $prefectures=Mst_prefecture::paginate(10);
         return Mst_prefectureResource::collection($prefectures);
     }
-
     public function store(MstPrefectureStoreFromRequest $request){
-
-        return ;
+        $mst_pre=Mst_prefecture::create($request->only(['prefecture_cd','prefecture_name']));
     }
-
 }
