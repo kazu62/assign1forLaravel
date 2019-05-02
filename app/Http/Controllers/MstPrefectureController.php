@@ -10,7 +10,8 @@ use App\Http\Resources\Mst_prefecture as Mst_prefectureResource;
 class MstPrefectureController extends Controller
 {
     public function index(){
-        $prefectures=Mst_prefecture::paginate(10);
+        $prefectures=Mst_prefecture::orederBy('prefecture_cd','asc')
+        ->paginate(10);
         return Mst_prefectureResource::collection($prefectures);
     }
 
