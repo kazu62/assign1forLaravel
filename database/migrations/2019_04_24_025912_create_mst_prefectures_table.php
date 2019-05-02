@@ -14,7 +14,7 @@ class CreateMstPrefecturesTable extends Migration
     public function up()
     {
         Schema::create('mst_prefectures', function (Blueprint $table) {
-            // $table->bigIncrements('id');
+            $table->interger('id');
             $table->char('prefecture_cd',2);
             $table->primary('prefecture_cd');
             $table->string('prefecture_name',20);
