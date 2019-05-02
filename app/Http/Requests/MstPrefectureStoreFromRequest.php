@@ -13,7 +13,7 @@ class MstPrefectureStoreFromRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -35,7 +35,6 @@ class MstPrefectureStoreFromRequest extends FormRequest
         'prefecture_cd.max'=>'地域コードの最大値は2文字です',
         'prefecture_cd.regex'=>'地域コードが不正です',
         'prefecture_name.required'=>'地域名が不正です'
-
        ];
 
     }
