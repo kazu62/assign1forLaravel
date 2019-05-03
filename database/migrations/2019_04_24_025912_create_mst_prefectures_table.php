@@ -14,12 +14,11 @@ class CreateMstPrefecturesTable extends Migration
     public function up()
     {
         Schema::create('mst_prefectures', function (Blueprint $table) {
-            $table->integer('id')->nullable();
             $table->char('prefecture_cd',2);
             $table->primary('prefecture_cd');
             $table->string('prefecture_name',20);
-            $table->char('insert_cd',5);
-            $table->timestamps();
+            $table->char('insert_cd',5)->default('00001');
+            $table->datetime('insert_date');
         });
     }
 

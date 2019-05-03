@@ -10,6 +10,8 @@ $factory->define(Mst_prefecture::class, function (Faker $faker) {
     return [
         'prefecture_cd'=>$faker->randomNumber($nbDigits = 2),
         'prefecture_name'=>$faker->prefecture,
-        'insert_cd'=>$faker->randomNumber($nbDigits = 5)
+        'insert_cd'=>$faker->randomNumber($nbDigits = 5),
+        'insert_date'=>$faker->dateTimeBetween('-20 years', '-2years')
+        ->format('Y-m-d H:i:s')
     ];
 });
